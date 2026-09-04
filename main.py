@@ -15,10 +15,29 @@ def get_pc_input():
     return pc_choice
 
 # compare and determine which one is the winner
-
+def determine_winner(user_input, pc_input):
+    if user_input == pc_input:
+        print("DRAW!!")
+    elif (user_input == "rock" and pc_input == "scissor") \
+    or (user_input == "scissor" and pc_input == "paper") \
+    or (user_input == "paper" and pc_input == "rock"):
+        print("user won!")
+    else:
+        print("computer won!")
 
 
 # Create a main function as the runner
+def main():
+    user_input = get_user_input()
+    pc_input = get_pc_input()
 
+    determine_winner(user_input, pc_input)
+    print("end of game!")
 
 # make an iteration for doing the game as much as we need
+answer = "y"
+
+while answer != "n":
+    if answer == "y":
+        main()
+    answer = input("do you want to continue? (y/n)").lower()
