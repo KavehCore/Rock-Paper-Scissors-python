@@ -35,8 +35,8 @@ def main():
     print("end of game!")
 
 # make an iteration for doing the game as much as we need
-answer = "y"
 if __name__ == "__main__":
+    answer = "y"
     while answer != "n":
         if answer == "y":
             main()
