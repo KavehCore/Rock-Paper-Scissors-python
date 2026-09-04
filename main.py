@@ -8,8 +8,14 @@ def get_user_input():
     while choice not in USER_CHOICES:
         choice = input("pick yor choise [rock, paper, scissor]: ").lower()
     return choice
+# create a function to get pc input
+def get_pc_input():
+    pc_choice = random.choice(USER_CHOICES)
+    print(f"pc choice was: {pc_choice}")
+    return pc_choice
 
 # compare and determine which one is the winner
+
 
 
 # Create a main function as the runner
